@@ -72,6 +72,14 @@ body {
   margin-inline: 8px;
 }
 
+.reviewrs-right p {
+  color: var(--sub-title);
+}
+
+.reviewers-google p {
+  line-height: 2;
+}
+
 .reviewers-google,
 .reviewers-meta {
   background-color: var(--card-background);
@@ -81,11 +89,12 @@ body {
   flex-direction: column;
   gap: 16px;
   margin-block-end: 40px;
-  padding: 32px;
+  padding: 24px;
 }
 
 .google,
 .meta {
+  align-items: center;
   display: flex;
 }
 
@@ -96,10 +105,14 @@ body {
 }
 
 /* footer */
+footer {
+  display: flex;
+  justify-content: center;
+}
 .author-info {
   font-size: 14px;
   text-align: center;
-  margin-top: 16px;
+  margin-bottom: 16px;
   color: rgb(55, 65, 81);
 }
 
@@ -107,4 +120,42 @@ body {
   text-decoration: none;
 }
 
-/* codigo de copilot */
+/* Responsive desing para notebook */
+@media screen and (min-width: 1024px) {
+  .reviewers-left {
+    /* border: 1px solid red; */
+    margin-inline: 16px;
+  }
+
+  .reviewrs-right {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .reviewers-google {
+    margin-inline-start: 190px;
+  }
+
+  .reviewers-meta {
+    margin-inline-end: 190px;
+  }
+
+  .reviewers-google,
+  .reviewers-meta {
+    width: 355px;
+  }
+}
+/* Responsive Desing para Desktop */
+@media screen and (min-width: 1280px) {
+  .reviewers-section {
+    flex-direction: row;
+    margin-inline: 64px;
+  }
+
+  .reviewers-left,
+  .reviewrs-right {
+    margin-block-start: 112px;
+  }
+}
